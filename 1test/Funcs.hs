@@ -1,4 +1,5 @@
-module Funcs(isPalindrom6) where
+module Funcs(isPalindrom6
+			,isPalindrom) where
 
 isPalindrom6 :: Int -> Bool
 isPalindrom6 = isPalindrom 10 6
