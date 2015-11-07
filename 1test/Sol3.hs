@@ -15,6 +15,13 @@ resNumbersN n =
             in maybe (edge, (mul1, mul2)) (\mVal -> (mVal*el, (el, mVal))) max 
     in snd $ foldr foldFunc (0, (0, 0)) nums
 
+
+-- Maybe you can think that it`s identical to sol1 solution
+-- but laziness of haskell allow to write things like we 
+-- calculate all numbers but in real we calculate  only numbers
+-- which we will be used. We can see it looking at the speed
+-- of main program switching 'import Sol1' to 'import Sol3'
+-- and backwards.
 findMaxPairBiggerThan :: Int -> Int -> Int -> Maybe Int
 findMaxPairBiggerThan edge digCount secondNum =
     let maxBound = (10^digCount) - 1
