@@ -1,4 +1,4 @@
-import Sol1
+import Sol3
 
 putStrShow = putStr.show
 
